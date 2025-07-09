@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controller.EmployeeController"
+            stylesheets="@style.css">
+
+    <top>
+        <Label text="Employee Management"
+               styleClass="label-title"
+               BorderPane.alignment="CENTER"/>
+    </top>
+
+    <center>
+        <TableView fx:id="employeeTable">
+            <columns>
+                <TableColumn fx:id="idCol" text="ID"/>
+                <TableColumn fx:id="nameCol" text="Name"/>
+                <TableColumn fx:id="genderCol" text="Gender"/>
+                <TableColumn fx:id="deptCol" text="Department"/>
+                <TableColumn fx:id="posCol" text="Position"/>
+                <TableColumn fx:id="emailCol" text="Email"/>
+                <TableColumn fx:id="phoneCol" text="Phone"/>
+                <TableColumn fx:id="hireCol" text="Hire Date"/>
+            </columns>
+        </TableView>
+    </center>
+
+    <bottom>
+        <VBox spacing="10" alignment="CENTER" padding="10">
+            <HBox spacing="10">
+                <TextField fx:id="nameField" promptText="Name"/>
+                <TextField fx:id="genderField" promptText="Gender"/>
+                <TextField fx:id="deptField" promptText="Department"/>
+                <TextField fx:id="posField" promptText="Position"/>
+            </HBox>
+            <HBox spacing="10">
+                <TextField fx:id="emailField" promptText="Email"/>
+                <TextField fx:id="phoneField" promptText="Phone"/>
+                <TextField fx:id="hireDateField" promptText="Hire Date"/>
+            </HBox>
+            <HBox spacing="10">
+                <Button text="Add" onAction="#addEmployee"/>
+                <Button text="Update" onAction="#updateEmployee"/>
+                <Button text="Delete" onAction="#deleteEmployee"/>
+            </HBox>
+        </VBox>
+    </bottom>
+
+</BorderPane>
+

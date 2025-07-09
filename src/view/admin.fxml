@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controller.AdminController"
+            stylesheets="@style.css">
+
+    <top>
+        <Label text="Admin Management"
+               styleClass="label-title"
+               BorderPane.alignment="CENTER"/>
+    </top>
+
+    <center>
+        <TableView fx:id="adminTable">
+            <columns>
+                <TableColumn fx:id="idCol" text="ID" />
+                <TableColumn fx:id="nameCol" text="Name" />
+                <TableColumn fx:id="emailCol" text="Email" />
+            </columns>
+        </TableView>
+    </center>
+
+    <bottom>
+        <VBox spacing="10" alignment="CENTER">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+
+            <HBox spacing="10">
+                <TextField fx:id="nameField" promptText="Name" />
+                <TextField fx:id="emailField" promptText="Email" />
+                <TextField fx:id="passwordField" promptText="Password" />
+            </HBox>
+            <HBox spacing="10">
+                <Button text="Add" onAction="#addAdmin" />
+                <Button text="Update" onAction="#updateAdmin" />
+                <Button text="Delete" onAction="#deleteAdmin" />
+                <!--
+                <Button text="Back" onAction="#backToDashboard" />
+                -->
+            </HBox>
+        </VBox>
+    </bottom>
+
+</BorderPane>
+
+

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" spacing="20.0"
+      xmlns="http://javafx.com/javafx/8"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="controller.DashboardController"
+      stylesheets="@style.css">
+    <Label text="Welcome to HR Dashboard"
+           styleClass="label-title" />
+    <Button text="Admin" onAction="#goToAdmin" minWidth="150" />
+    <Button text="Employee" onAction="#goToEmployee" minWidth="150" />
+    <Button text="Logout" onAction="#logout" minWidth="150" />
+    <Button text="Exit" onAction="#exitApp" minWidth="150" />
+</VBox>
+
