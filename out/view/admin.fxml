@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="controller.AdminController">
+    <top>
+        <Label text="Admin Panel" BorderPane.alignment="CENTER"/>
+    </top>
+    <center>
+        <TableView fx:id="adminTable" prefHeight="200.0">
+            <columns>
+                <TableColumn fx:id="idCol" text="ID"/>
+                <TableColumn fx:id="nameCol" text="Name"/>
+                <TableColumn fx:id="emailCol" text="Email"/>
+                <TableColumn fx:id="passwordCol" text="Password"/>
+            </columns>
+        </TableView>
+    </center>
+    <bottom>
+        <!-- FIXED: use only numbers and commas, not the class call -->
+        <HBox spacing="10" alignment="CENTER" >
+            <padding>
+    <Insets top="10" right="10" bottom="10" left="10"/>
+</padding>
+
+            <TextField fx:id="nameField" promptText="Name"/>
+            <TextField fx:id="emailField" promptText="Email"/>
+            <TextField fx:id="passwordField" promptText="Password"/>
+            <Button text="Add" onAction="#handleAdd"/>
+            <Button text="Update" onAction="#handleUpdate"/>
+            <Button text="Delete" onAction="#handleDelete"/>
+        </HBox>
+    </bottom>
+</BorderPane>
+
+
+
+

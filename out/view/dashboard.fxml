@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controller.DashboardController">
+    <children>
+        <VBox spacing="15.0" alignment="CENTER" AnchorPane.topAnchor="50.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0">
+            <Label text="Dashboard" />
+            <Button text="Admin Panel" onAction="#goToAdmin" />
+            <Button text="Employee Panel" onAction="#goToEmployee" />
+            <Button text="Logout" onAction="#logout" />
+        </VBox>
+    </children>
+</AnchorPane>
+
