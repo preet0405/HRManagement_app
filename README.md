@@ -1,129 +1,107 @@
-<<<<<<< HEAD
-// README.md - Replace with full code
-=======
-HR Management System
+# 🏢 HRManagement_PreetPatel
 
 I have taken help from the class collaboration as well as chatgpt, w3schools and copilot in crud functions and fxml files.
 
-🚀 Project Overview
-The HR Management System is a sleek desktop application built with JavaFX designed to streamline the management of employee and admin records. This intuitive system offers separate dashboards for Admin and Employee management, enabling CRUD operations with smooth navigation and a user-friendly interface.
+A **JavaFX Desktop Application** for efficient **Employee & Admin Management** with integrated **Salary Calculation** and **MySQL** database connectivity.
 
-🔥 Key Features
-Admin Dashboard
+---
 
-View, add, update, and delete admin profiles
+## 🚀 Project Overview
 
-Manage user credentials securely (passwords stored temporarily for demo)
+This project is a robust Human Resource Management System developed in JavaFX. It allows Admins to manage employee records seamlessly, while employees can view their profiles including dynamically calculated **Net Salary** based on stored salary components.
 
-Clean and responsive UI with data tables
+---
 
-Employee Dashboard
+## ✨ Features
 
-Display comprehensive employee data with customizable columns
+- 🔐 Secure Login for Admin and Employees  
+- 👥 Full CRUD operations for Employee and Admin records  
+- 💰 Salary Calculation:  
+  **Net Salary = Basic Salary + Bonus - Deductions**  
+- 🖥️ Intuitive and Responsive JavaFX User Interface  
+- 🔗 MySQL Database integration via JDBC  
+- 📁 Organized project structure following MVC pattern  
 
-Manage employee info including name, gender, department, position, contact details, and hire date
+---
 
-Seamless data entry and modification through form controls
+## 🏗️ Project Structure
 
-Navigation
+src/
+├── app/ # Application entry point (MainApp.java)
+├── controller/ # JavaFX controllers handling UI logic
+├── dao/ # Data Access Objects for database operations
+├── model/ # Entity models (Employee, Admin, Salary)
+├── util/ # Utility classes (DB Connection, Salary Calculation)
+├── view/ # FXML UI layouts
+out/ # Compiled class files (excluded from repo)
+lib/ # External dependencies (MySQL Connector)
 
-Easy switching between Admin and Employee modules via Dashboard buttons
-
-Consistent layout and styling for a professional look
-
-🛠 Technology Stack
-Technology	Version/Details
-Java	17+
-JavaFX	8+
-FXML	UI markup and layout
-MVC Pattern	For clean code separation
-CSS	Styling and theming
-
-📁 Project Structure
-pgsql
+yaml
 Copy
-Edit
-├── src
-│   ├── controller
-│   │   ├── AdminController.java
-│   │   ├── EmployeeController.java
-│   │   └── DashboardController.java
-│   ├── model
-│   │   ├── Admin.java
-│   │   └── Employee.java
-│   └── view
-│       ├── admin.fxml
-│       ├── employee.fxml
-│       └── dashboard.fxml
-├── style
-│   └── style.css
-├── MainApp.java
-└── README.md
-🎯 How to Run
-Clone the repository:
+
+---
+
+## 💻 Prerequisites
+
+- Java 17 or higher  
+- JavaFX SDK 24.0.1  
+- MySQL Server (configured with proper tables)  
+- MySQL Connector/J 9.3.0 (JDBC driver)  
+
+---
+
+## 🛠️ Setup & Installation
+
+1. **Clone the Repository**
+
+```bash
+git clone https://github.com/yourusername/HRManagement_PreetPatel.git
+cd HRManagement_PreetPatel
+Configure MySQL
+
+Create required databases and tables (Employee, Admin, Salary) as per your schema.
+
+Update database credentials in src/util/DBConnection.java:
+
+java
+Copy
+private static final String URL = "jdbc:mysql://localhost:3306/your_database";
+private static final String USER = "your_username";
+private static final String PASSWORD = "your_password";
+Compile the Project
 
 bash
 Copy
-Edit
-git clone https://github.com/yourusername/hr-management-javafx.git
-cd hr-management-javafx
-Configure JavaFX:
-
-Download and setup JavaFX SDK (version 8 or above).
-
-Add JavaFX libraries to your IDE or compile/run commands.
-
-Compile & Run:
-
-Using IDE: Run MainApp.java as a Java application.
-
-Using command line:
+javac --module-path "C:\javafx-sdk-24.0.1\lib" --add-modules javafx.controls,javafx.fxml -cp ".;lib/mysql-connector-j-9.3.0.jar" -d out @sources.txt
+Run the Application
 
 bash
 Copy
-Edit
-javac --module-path /path/to/javafx/lib --add-modules javafx.controls,javafx.fxml -d out src/**/*.java
-java --module-path /path/to/javafx/lib --add-modules javafx.controls,javafx.fxml -cp out MainApp
-Use the app:
+java --module-path "C:\javafx-sdk-24.0.1\lib" --add-modules javafx.controls,javafx.fxml -cp "out;lib/mysql-connector-j-9.3.0.jar" app.MainApp
+🎯 Usage Guide
+Launch the app and login using Admin or Employee credentials.
 
-Start on the Dashboard.
+Navigate through dashboards for managing or viewing data.
 
-Click Admin or Employee buttons to manage data.
+Employee net salary is automatically computed and displayed by the app:
 
-Add, update, delete records as needed.
-
-💡 Future Improvements
-Integration with a database (MySQL, SQLite) for persistent storage.
-
-Enhanced validation and error handling.
-
-Password hashing for security.
-
-User authentication and role-based access control.
-
-Export/import functionality (CSV, Excel).
-
-Responsive UI enhancements.
-
-🎨 Styling
-The project includes a style.css file for consistent theme:
-
-css
+java
 Copy
-Edit
-.label-title {
-    -fx-font-size: 24px;
-    -fx-font-weight: bold;
-    -fx-padding: 10px;
-}
+Net Salary = Basic Salary + Bonus - Deductions
+Add, update, or delete records and changes will reflect in the database immediately.
 
-.button {
-    -fx-background-color: #4CAF50;
-    -fx-text-fill: white;
-    -fx-font-weight: bold;
-}
+📌 Important Notes
+Ensure MySQL server is running before launching the app.
 
-👨‍💻 Author
+Double-check database connection parameters in DBConnection.java.
+
+The project follows MVC design for maintainability and scalability.
+
+📝 License
+This project is licensed under the MIT License. Feel free to modify and use it.
+
+🙋‍♂️ Author
 Preet Patel
 
->>>>>>> f554658e26717e74af701784863aaca43094ac7c
+⭐️ Support
+If you find this project useful, please ⭐️ star the repo and share your feedback!
